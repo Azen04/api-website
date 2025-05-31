@@ -1,0 +1,13 @@
+main #bottom,
+main #bottom #collection #sort-btns {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#bottom {
+    #collection {
+        #sort-btns {
+            justify-content: center;
+        }
+    }
+}
