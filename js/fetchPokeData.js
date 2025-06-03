@@ -3,7 +3,7 @@ function fetchPokemonData() {
     const promises = []
     const registered = []
 
-    while (promises.length < 7) {
+    while (promises.length < 6) {
         const id = Math.floor(Math.random() * 151)
 
         if (!registered.includes(id)) {

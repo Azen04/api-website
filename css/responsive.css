@@ -1,8 +1,8 @@
-@media screen and (max-width: 1470px) {
+@media screen and (max-width: 1650px) {
 
     #main,
     #favs {
-        max-width: 515px;
+        max-width: 840px;
     }
 }
 
