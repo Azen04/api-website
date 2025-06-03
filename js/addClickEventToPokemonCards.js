@@ -13,10 +13,6 @@ function addListenerToPokeItems(pokeContainer) {
 
 const updateCollections = (id, direction) => {
     const item = document.getElementById(id)
-    const itemIcon = item.childNodes[1]
-
-    console.log(itemIcon);
-
 
     if (direction === 'toFavs') {
         main.removeChild(item)
