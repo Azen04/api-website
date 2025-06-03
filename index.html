@@ -5,42 +5,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>api-website</title>
-    <link rel="stylesheet" href="./styles/others/base.css">
-    <link rel="stylesheet" href="./styles/desktop/body.css">
-    <link rel="stylesheet" href="./styles/desktop/data.css">
-    <link rel="stylesheet" href="./styles/desktop/bottom.css">
-    <link rel="stylesheet" href="./styles/others/components.css">
-    <link rel="stylesheet" href="./styles/others/modules.css">
-
-    <script src="./scripts/main.js" defer></script>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="stylesheet" href="./css/pokemonTypes.css">
+    <script src="./js/main.js" defer></script>
+    <script src="./js/fetchPokeData.js"></script>
+    <script src="./js/createPokemonData.js"></script>
+    <script src="./js/addClickEventToPokemonCards.js"></script>
+    <script src="./js/checkType.js"></script>
+    <script src="./js/sortIds.js"></script>
 </head>
 
 <body>
+    <div id="accumulatedStats">
+        <h2>TOTAL STATS</h2>
+        <div class="tracker-container">
 
-    <main>
+            <div class="stat-name">HP: <span id="hp" class="stat">0</span></div>
+            <div class="stat-name">ATK: <span id="atk" class="stat">0</span></div>
+            <div class="stat-name">spATK: <span id="spAtk" class="stat">0</span></div>
+            <div class="stat-name">DEF: <span id="def" class="stat">0</span></div>
+            <div class="stat-name">spDEF: <span id="spDef" class="stat">0</span></div>
+            <div class="stat-name">SPD: <span id="spd" class="stat">0</span></div>
+        </div>
+    </div>
 
-        <div id="data">
-            <h2 id="data-title">Data</h2>
-            <div id="data-content"></div>
+    <section id="main-section">
+        <div class="heading">
+            <h2>PC</h2>
+            <div class="sort">
+                <span>Start from</span>
+                <button class="sortBtn" type="button" data-sortdir="asc">lowest</button>
+                <button class="sortBtn" type="button" data-sortdir="desc">highest</button>
+            </div>
         </div>
 
-        <div id="bottom">
-            <div id="favs" class="favs-styles">
-                <h2 id="favs-title">Favorites</h2>
-                <ul id="favs-content"></ul>
-            </div>
 
-            <div id="collection">
-                <h2>Collection</h2>
-                <div id="sort-btns">
-                    <button class="sort-btn btn">A-Z</button>
-                    <button class="sort-btn btn">Z-A</button>
-                </div>
-                <div id="items" class="collection-styles"></div>
-            </div>
+        <div id="main" class="container"></div>
+    </section>
 
+    <section id="favs-section">
+        <div class="heading">
+            <h2>Team</h2>
         </div>
-    </main>
+        <div id="favs"></div>
+    </section>
+
 </body>
 
 </html>
